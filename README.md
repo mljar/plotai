@@ -6,7 +6,8 @@
 
 The easiest way to create plots in Python
 
-[Demo Video](https://github.com/mljar/plotai/raw/main/media/PlotAI-demo-Australia.mp4)
+
+https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
 
 
 
