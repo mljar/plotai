@@ -46,6 +46,4 @@ class ChatGPT():
             ],
         }
         response = openai.ChatCompletion.create(**params)
-
-        print(response)
-        print(response["choices"][0]["message"]["content"])
+        return response["choices"][0]["message"]["content"]

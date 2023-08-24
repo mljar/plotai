@@ -1,6 +1,9 @@
 import unittest
 
+from plotai.prompt.prompt import Prompt
+
 class PromptTest(unittest.TestCase):
 
     def test_init(self):
-        pass
+        p = Prompt("do scatter plot")
+        self.assertTrue(p.value is not None)
