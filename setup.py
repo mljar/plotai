@@ -10,7 +10,7 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="plotai",
-    varsion="0.0.2",
+    version="0.0.1",
     description="Create plots in Python with AI",
     long_description=long_description,
     long_description_content_type="text/markdown",
