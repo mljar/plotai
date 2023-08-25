@@ -30,7 +30,11 @@ The idea:
 2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
 3. Returned Python code is executed and plot is displayed.
 
-https://github.com/mljar/plotai/assets/6959032/138a1812-4941-4ae3-b6d6-c45238852190
+
+
+https://github.com/mljar/plotai/assets/6959032/cb80bc35-e534-466d-aa1d-ce240d35f624
+
+
 
 ## Get started
 
@@ -72,7 +76,10 @@ plot.make("make a scatter plot")
 
 Contents of video:
 
-https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
+
+https://github.com/mljar/plotai/assets/6959032/e62b1a26-7c91-40e4-9d2d-1a600d8dd7ba
+
+
 
 #### Analyze Iris dataset
 
