@@ -25,9 +25,6 @@
 
 The easiest way to create plots in Python and Matplotlib. The `plotai` is using LLM to generate code and plots.
 
-PlotAI is a powerful Python package that streamlines the process of creating captivating plots using Matplotlib. With PlotAI, visualizing your data becomes effortless, allowing you to focus on insights rather than intricate coding.
-With PlotAI, you can leave behind the complexities of manual plot configuration. By combining the power of Matplotlib with the intuitive nature of natural language prompts, PlotAI empowers you to bring your data to life through stunning visualizations effortlessly. Dive into the world of seamless data visualization with PlotAI today!
-
 The idea:
 1. User provide input DataFrame and prompt.
 2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
