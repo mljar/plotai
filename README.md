@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="450" alt="PlotAI logo"/>
+  <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="350" alt="PlotAI logo"/>
 </p>
 
 <p align="center">
