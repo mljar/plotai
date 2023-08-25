@@ -34,7 +34,7 @@ https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b
 
 ## 👩‍💼🐦 Connect with Us on LinkedIn & Twitter
 
-
+Stay up-to-date with the latest updates about PlotAI 🎨🤖 by following us on Twitter ([MLJAR Twitter](https://twitter.com/MLJAROfficial)) and LinkedIn ([Aleksandra LinkedIn](https://www.linkedin.com/in/aleksandra-p%C5%82o%C5%84ska-42047432/) & [Piotr LinkedIn](https://www.linkedin.com/in/piotr-plonski-mljar/)). We look forward to connecting with you and hearing your thoughts, ideas, and experiences with PlotAI. Let's explore the future of AI together!
 
 ## 🛡 Disclaimer
 
