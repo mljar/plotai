@@ -23,14 +23,59 @@
 
 # PlotAI 🎨🤖 
 
-The easiest way to create plots in Python
+The easiest way to create plots in Python and Matplotlib. The `plotai` takes your prompt and sends to LLM with
 
 
-https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
+https://github.com/mljar/plotai/assets/6959032/138a1812-4941-4ae3-b6d6-c45238852190
+
 
 ## Get started
 
+Install `plotai` package:
+
+```bash
+pip install plotai
+```
+
+Create `.env` file with OpenAI API key:
+
+```
+OPENAI_API_KEY=your-key-here
+```
+
+You can also pass OpenAI API key in Python
+
+```python
+import os
+os.environ["OPENAI_API_KEY"] = "your-key-here"
+```
+
+Import `plotai` and make plots:
+
+```python
+# import PlotAI
+from plotai import PlotAI
+
+# create PlotAI object, pass pandas DataFrame as argument
+plot = PlotAI(df)
+
+# make a plot, just tell what you want
+plot.make("make a scatter plot")
+```
+
+
+## More examples
+
+#### Analyze GPD dataset
+
+Contents of video:
+
+https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
+
+#### Analyze Iris dataset
+
 ![](https://github.com/mljar/plotai/blob/main/media/PlotAI-Iris-demo.png?raw=true)
+
 
 ## 👩‍💼🐦 Connect with Us on LinkedIn & Twitter
 
