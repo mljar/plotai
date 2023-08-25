@@ -30,13 +30,23 @@ The idea:
 2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
 3. Returned Python code is executed and plot is displayed.
 
-
-
 https://github.com/mljar/plotai/assets/6959032/cb80bc35-e534-466d-aa1d-ce240d35f624
 
+The simplest possible API for plotting:
+```python
+# import packages
+import pandas as pd
+from plotai import PlotAI
+# create some data
+df = pd.DataFrame({"x":[1,2,3], "y": [4,5,6]})
+# do a plot
+plot = PlotAI(df)
+plot.make("scatter plot")
+```
 
+The `PlotAI` class has only one method `make()`.
 
-## Get started
+## 🚀 Get started
 
 Install `plotai` package:
 
@@ -74,12 +84,7 @@ plot.make("make a scatter plot")
 
 #### Analyze GPD dataset
 
-Contents of video:
-
-
 https://github.com/mljar/plotai/assets/6959032/e62b1a26-7c91-40e4-9d2d-1a600d8dd7ba
-
-
 
 #### Analyze Iris dataset
 
@@ -92,6 +97,10 @@ Stay up-to-date with the latest updates about PlotAI 🎨🤖 by following us on
 
 ## ⚠️ Limitations
 
+PlotAI is in very experimental form, below some limitaions:
+- PlotAI is using OpenAI ChatGPT-3.5-turbo for completions, it will be nice to extend to other LLMs.
+- PlotAI is sending 5 first rows from your DataFrame to OpenAI ChatGPT. If you have sensitive data, please remove/encode it before passing to `PlotAI`.
+- PlotAI is executing Python code returned by LLM, it can be dangerous and unsafe. It would be nice to have option to accept reponse code before executin.
 
 
 ## 🛡 Disclaimer
