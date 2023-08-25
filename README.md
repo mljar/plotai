@@ -46,6 +46,8 @@ plot.make("scatter plot")
 
 The `PlotAI` class has only one method, `make()`.
 
+It works in Python scripts and in notebooks (Jupyter, Colab, VS Code).
+
 ## 🚀 Get started
 
 Install `plotai` package:
