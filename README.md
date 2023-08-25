@@ -23,11 +23,14 @@
 
 # PlotAI 🎨🤖 
 
-The easiest way to create plots in Python and Matplotlib. The `plotai` takes your prompt and sends to LLM with
+The easiest way to create plots in Python and Matplotlib. The `plotai` is using LLM to generate code and plots.
 
+The idea:
+1. User provide input DataFrame and prompt.
+2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
+3. Returned Python code is executed and plot is displayed.
 
 https://github.com/mljar/plotai/assets/6959032/138a1812-4941-4ae3-b6d6-c45238852190
-
 
 ## Get started
 
@@ -63,7 +66,6 @@ plot = PlotAI(df)
 plot.make("make a scatter plot")
 ```
 
-
 ## More examples
 
 #### Analyze GPD dataset
@@ -80,6 +82,10 @@ https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b
 ## 👩‍💼🐦 Connect with Us on LinkedIn & Twitter
 
 Stay up-to-date with the latest updates about PlotAI 🎨🤖 by following us on Twitter ([MLJAR Twitter](https://twitter.com/MLJAROfficial)) and LinkedIn ([Aleksandra LinkedIn](https://www.linkedin.com/in/aleksandra-p%C5%82o%C5%84ska-42047432/) & [Piotr LinkedIn](https://www.linkedin.com/in/piotr-plonski-mljar/)). We look forward to connecting with you and hearing your thoughts, ideas, and experiences with PlotAI. Let's explore the future of AI together!
+
+## ⚠️ Limitations
+
+
 
 ## 🛡 Disclaimer
 
