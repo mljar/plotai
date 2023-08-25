@@ -26,9 +26,9 @@
 The easiest way to create plots in Python and Matplotlib. The `plotai` is using LLM to generate code and plots.
 
 The idea:
-1. User provide input DataFrame and prompt.
-2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
-3. Returned Python code is executed and plot is displayed.
+1. User provides input DataFrame and prompt.
+2. The `PlotAI` constructs a prompt for LLM, which contains the first 5 rows of DataFrame and the user's prompt and asks for Python code as output.
+3. Returned Python code is executed, and the plot is displayed.
 
 https://github.com/mljar/plotai/assets/6959032/cb80bc35-e534-466d-aa1d-ce240d35f624
 
@@ -44,7 +44,7 @@ plot = PlotAI(df)
 plot.make("scatter plot")
 ```
 
-The `PlotAI` class has only one method `make()`.
+The `PlotAI` class has only one method, `make()`.
 
 ## 🚀 Get started
 
@@ -54,13 +54,13 @@ Install `plotai` package:
 pip install plotai
 ```
 
-Create `.env` file with OpenAI API key:
+Create `.env` file with the OpenAI API key:
 
 ```
 OPENAI_API_KEY=your-key-here
 ```
 
-You can also pass OpenAI API key in Python
+You can also pass the OpenAI API key in Python:
 
 ```python
 import os
@@ -73,7 +73,7 @@ Import `plotai` and make plots:
 # import PlotAI
 from plotai import PlotAI
 
-# create PlotAI object, pass pandas DataFrame as argument
+# create PlotAI object, pass pandas DataFrame as an argument
 plot = PlotAI(df)
 
 # make a plot, just tell what you want
@@ -82,11 +82,11 @@ plot.make("make a scatter plot")
 
 ## More examples
 
-#### Analyze GPD dataset
+#### Analyze the GPD dataset
 
 https://github.com/mljar/plotai/assets/6959032/e62b1a26-7c91-40e4-9d2d-1a600d8dd7ba
 
-#### Analyze Iris dataset
+#### Analyze the Iris dataset 
 
 ![](https://github.com/mljar/plotai/blob/main/media/PlotAI-Iris-demo.png?raw=true)
 
@@ -97,15 +97,15 @@ Stay up-to-date with the latest updates about PlotAI 🎨🤖 by following us on
 
 ## ⚠️ Limitations
 
-PlotAI is in very experimental form, below some limitaions:
+PlotAI is in very experimental form, below are some limitations:
 - PlotAI is using OpenAI ChatGPT-3.5-turbo for completions, it will be nice to extend to other LLMs.
 - PlotAI is sending 5 first rows from your DataFrame to OpenAI ChatGPT. If you have sensitive data, please remove/encode it before passing to `PlotAI`.
-- PlotAI is executing Python code returned by LLM, it can be dangerous and unsafe. It would be nice to have option to accept reponse code before executin.
+- PlotAI is executing Python code returned by LLM, it can be dangerous and unsafe. It would be nice to have the option to accept the response code before execution.
 
 
 ## 🛡 Disclaimer
 
-This project, PlotAI, is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise. The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. 
+This project, PlotAI, is provided "as is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise. The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. 
 
 Please note that the use of the OpenAI language models can be expensive due to its token usage. By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your OpenAI API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
 
