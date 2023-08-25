@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/mljar/plotai/blob/main/media/robot-charts.png?raw=true" height="300" alt="Robot doing plot"/>
+  <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="450" alt="PlotAI logo"/>
 </p>
 
 <p align="center">
@@ -23,18 +23,69 @@
 
 # PlotAI 🎨🤖 
 
-The easiest way to create plots in Python
+The easiest way to create plots in Python and Matplotlib. The `plotai` is using LLM to generate code and plots.
 
+The idea:
+1. User provide input DataFrame and prompt.
+2. The `PlotAI` constructs a prompt for LLM which contains first 5 rows of DataFrame and user's prompt and asks for Python code as output.
+3. Returned Python code is executed and plot is displayed.
 
-https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
+https://github.com/mljar/plotai/assets/6959032/138a1812-4941-4ae3-b6d6-c45238852190
 
 ## Get started
 
+Install `plotai` package:
+
+```bash
+pip install plotai
+```
+
+Create `.env` file with OpenAI API key:
+
+```
+OPENAI_API_KEY=your-key-here
+```
+
+You can also pass OpenAI API key in Python
+
+```python
+import os
+os.environ["OPENAI_API_KEY"] = "your-key-here"
+```
+
+Import `plotai` and make plots:
+
+```python
+# import PlotAI
+from plotai import PlotAI
+
+# create PlotAI object, pass pandas DataFrame as argument
+plot = PlotAI(df)
+
+# make a plot, just tell what you want
+plot.make("make a scatter plot")
+```
+
+## More examples
+
+#### Analyze GPD dataset
+
+Contents of video:
+
+https://github.com/mljar/plotai/assets/6959032/378dd5ac-4169-4b02-b726-8706c351b8e2
+
+#### Analyze Iris dataset
+
 ![](https://github.com/mljar/plotai/blob/main/media/PlotAI-Iris-demo.png?raw=true)
+
 
 ## 👩‍💼🐦 Connect with Us on LinkedIn & Twitter
 
 Stay up-to-date with the latest updates about PlotAI 🎨🤖 by following us on Twitter ([MLJAR Twitter](https://twitter.com/MLJAROfficial)) and LinkedIn ([Aleksandra LinkedIn](https://www.linkedin.com/in/aleksandra-p%C5%82o%C5%84ska-42047432/) & [Piotr LinkedIn](https://www.linkedin.com/in/piotr-plonski-mljar/)). We look forward to connecting with you and hearing your thoughts, ideas, and experiences with PlotAI. Let's explore the future of AI together!
+
+## ⚠️ Limitations
+
+
 
 ## 🛡 Disclaimer
 
