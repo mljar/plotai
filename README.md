@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://github.com/mljar/plotai/blob/main/media/PlotAI_logo.png?raw=true" height="270" alt="PlotAI logo"/>
+</p>
+
 <p align="center">
   <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="350" alt="PlotAI logo"/>
 </p>
