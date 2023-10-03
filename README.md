@@ -3,9 +3,6 @@
   <img src="https://github.com/mljar/plotai/blob/main/media/PlotAI_logo.png?raw=true" height="270" alt="PlotAI logo"/>
 </p>
 
-<p align="center">
-  <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="350" alt="PlotAI logo"/>
-</p>
 
 <p align="center">
   <em>🎨🤖 Create Python plots in matplotlib with LLM 🎨🤖</em>
@@ -52,6 +49,11 @@ plot.make("scatter plot")
 The `PlotAI` class has only one method, `make()`.
 
 It works in Python scripts and in notebooks (Jupyter, Colab, VS Code).
+
+
+<p align="center">
+  <img src="https://github.com/mljar/plotai/blob/main/media/plotai.jpg?raw=true" height="350" alt="PlotAI logo"/>
+</p>
 
 ## 🚀 Get started
 
