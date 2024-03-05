@@ -5,10 +5,14 @@ from plotai.llm.openai import ChatGPT
 from plotai.code.executor import Executor
 from plotai.code.logger import Logger
 
+
 class PlotAI:
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, model_version: str = "gpt-3.5-turbo", *args, **kwargs):
 
+        # OpenAI Model Version
+        self.model_version = model_version
+        # DataFrame to plot
         self.df, self.x, self.y, self.z = None, None, None, None
         if len(args) > 1:
             for i in range(len(args)):
@@ -34,13 +38,11 @@ class PlotAI:
                     setattr(self, k, kwargs[k])
 
     def make(self, prompt):
-
-        df, x, y, z = self.df, self.x, self.y, self.z
-        p = Prompt(prompt, self.df, self.x, self.y, self.z)    
+        p = Prompt(prompt, self.df, self.x, self.y, self.z)
 
         Logger().log({"title": "Prompt", "details": p.value})
 
-        response = ChatGPT().chat(p.value)
+        response = ChatGPT(model=self.model_version).chat(p.value)
 
         Logger().log({"title": "Response", "details": response})
 
@@ -49,8 +51,7 @@ class PlotAI:
         if error is not None:
             Logger().log({"title": "Error in code execution", "details": error})
 
-
-            # p_again = Prompt(prompt, self.df, self.x, self.y, self.z, previous_code=response, previous_error=error)  
+            # p_again = Prompt(prompt, self.df, self.x, self.y, self.z, previous_code=response, previous_error=error)
 
             # Logger().log({"title": "Prompt with fix", "details": p_again.value})
 
