@@ -2,10 +2,11 @@ import os
 import openai
 
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
-class ChatGPT():
+class ChatGPT:
 
     temperature = 0
     max_tokens = 1000
@@ -14,14 +15,15 @@ class ChatGPT():
     presence_penalty = 0.6
     model = "gpt-3.5-turbo"
 
-
-    def __init__(self):
+    def __init__(self, model: str):
         api_key = os.environ.get("OPENAI_API_KEY")
         if api_key is None:
-            raise Exception("Please set OPENAI_API_KEY environment variable."
-            "You can obtain API key from https://platform.openai.com/account/api-keys")
+            raise Exception(
+                "Please set OPENAI_API_KEY environment variable."
+                "You can obtain API key from https://platform.openai.com/account/api-keys"
+            )
         openai.api_key = api_key
-        
+        self.model = model
 
     @property
     def _default_params(self):
@@ -35,6 +37,7 @@ class ChatGPT():
         }
 
     def chat(self, prompt):
+        client = openai.OpenAI()
 
         params = {
             **self._default_params,
@@ -45,5 +48,5 @@ class ChatGPT():
                 }
             ],
         }
-        response = openai.ChatCompletion.create(**params)
-        return response["choices"][0]["message"]["content"]
+        response = client.chat.completions.create(**params)
+        return response.choices[0].message.content

@@ -89,6 +89,19 @@ plot = PlotAI(df)
 plot.make("make a scatter plot")
 ```
 
+By default the library will use '*gpt-3.5-turbo*'. You can use different OpenAI models:
+
+```python
+# import PlotAI
+from plotai import PlotAI
+
+# create PlotAI object, pass pandas DataFrame as an argument
+plot = PlotAI(df, model_version="gpt-4")
+
+# make a plot, just tell what you want
+plot.make("make a scatter plot")
+```
+
 ## More examples
 
 #### Analyze the GPD dataset
