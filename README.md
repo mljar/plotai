@@ -131,5 +131,9 @@ This project, PlotAI, is provided "as is" without any warranty, express or impli
 
 Please note that the use of the OpenAI language models can be expensive due to its token usage. By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your OpenAI API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
 
+## Convert Python Notebooks to web applications 📓 -> 🌐
 
+We are working on framework [Mercury](https://github.com/mljar/mercury) for sharing Python notebooks as interactive web applications. The framework is open source. We also working on a service for [one-click deployment of Python notebooks](https://runmercury.com/). You can check [Python notebooks integrations on our website](https://runmercury.com/use/). 
+
+All the best!
 
