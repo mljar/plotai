@@ -8,34 +8,20 @@ from plotai.code.logger import Logger
 
 class PlotAI:
 
-    def __init__(self, model_version: str = "gpt-3.5-turbo", *args, **kwargs):
-
-        # OpenAI Model Version
-        self.model_version = model_version
+    def __init__(self, *args, **kwargs):
+        self.model_version = "gpt-3.5-turbo"
         # DataFrame to plot
         self.df, self.x, self.y, self.z = None, None, None, None
-        if len(args) > 1:
-            for i in range(len(args)):
-                if isinstance(args[i], pd.DataFrame):
-                    raise Exception("You can pass only one DataFrame")
-
-        if len(args) == 1:
-            if isinstance(args[0], pd.DataFrame):
-                self.df = args[0]
-            else:
-                self.x = args[0]
-        elif len(args) == 2:
-            self.x = args[0]
-            self.y = args[1]
-        elif len(args) == 3:
-            self.x = args[0]
-            self.y = args[1]
-            self.z = args[2]
-
-        for k in kwargs:
-            for expected_k in ["x", "y", "z", "df"]:
-                if k == expected_k:
-                    setattr(self, k, kwargs[k])
+        
+        for expected_k in ["x", "y", "z", "df", "model_version"]:
+            if expected_k in kwargs:
+                setattr(self, expected_k, kwargs[expected_k])
+        
+        if self.df is None:
+            for arg in args:
+                if isinstance(arg, pd.DataFrame):
+                    self.df = arg
+                    break
 
     def make(self, prompt):
         p = Prompt(prompt, self.df, self.x, self.y, self.z)
@@ -47,7 +33,7 @@ class PlotAI:
         Logger().log({"title": "Response", "details": response})
 
         executor = Executor()
-        error = executor.run(response, globals(), locals())
+        error = executor.run(response, globals(), {"df":self.df, "x": self.x, "y": self.y, "z": self.z})
         if error is not None:
             Logger().log({"title": "Error in code execution", "details": error})
 
