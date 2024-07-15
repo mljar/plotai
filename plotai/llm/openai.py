@@ -16,13 +16,13 @@ class ChatGPT:
     model = "gpt-3.5-turbo"
 
     def __init__(self, model: str):
-        api_key = os.environ.get("OPENAI_API_KEY")
-        if api_key is None:
+        self.api_key = os.environ.get("OPENAI_API_KEY")
+        if self.api_key is None:
             raise Exception(
                 "Please set OPENAI_API_KEY environment variable."
                 "You can obtain API key from https://platform.openai.com/account/api-keys"
             )
-        openai.api_key = api_key
+        openai.api_key = self.api_key
         self.model = model
 
     @property
@@ -37,7 +37,7 @@ class ChatGPT:
         }
 
     def chat(self, prompt):
-        client = openai.OpenAI()
+        client = openai.OpenAI(api_key=self.api_key)
 
         params = {
             **self._default_params,
