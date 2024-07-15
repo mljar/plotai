@@ -3,3 +3,4 @@ pandas
 numpy
 openai
 python-dotenv
+boto3

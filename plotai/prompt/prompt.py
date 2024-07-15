@@ -13,7 +13,8 @@ class Prompt:
     def input_data_str(self):
         if self.df is not None:
             return f"""
-```python
+```
+python
 # pandas DataFrame
 '''
 {self.df.head(5)}
@@ -43,12 +44,14 @@ Plot should contain: {self.prompt}
 
 Initial python code to be updated        
 
-```python
+```
+python
 # TODO import required dependencies
 # TODO Provide the plot
 ```
 
-Output only Python code.
+Output only Python code. Don't even think about providing the plot. Just the code.
+There is also no need to tell me you are sending Python code, I know what I'm expecting
 """
 
         if self.previous_code != "":
