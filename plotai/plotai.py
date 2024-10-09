@@ -12,8 +12,9 @@ class PlotAI:
         self.model_version = "gpt-3.5-turbo"
         # DataFrame to plot
         self.df, self.x, self.y, self.z = None, None, None, None
+        self.verbose = True
         
-        for expected_k in ["x", "y", "z", "df", "model_version"]:
+        for expected_k in ["x", "y", "z", "df", "model_version", "verbose"]:
             if expected_k in kwargs:
                 setattr(self, expected_k, kwargs[expected_k])
         
@@ -25,12 +26,14 @@ class PlotAI:
 
     def make(self, prompt):
         p = Prompt(prompt, self.df, self.x, self.y, self.z)
-
-        Logger().log({"title": "Prompt", "details": p.value})
+        
+        if self.verbose:
+            Logger().log({"title": "Prompt", "details": p.value})
 
         response = ChatGPT(model=self.model_version).chat(p.value)
-
-        Logger().log({"title": "Response", "details": response})
+        
+        if self.verbose:
+            Logger().log({"title": "Response", "details": response})
 
         executor = Executor()
         error = executor.run(response, globals(), {"df":self.df, "x": self.x, "y": self.y, "z": self.z})
