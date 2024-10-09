@@ -27,12 +27,12 @@ class PlotAI:
     def make(self, prompt):
         p = Prompt(prompt, self.df, self.x, self.y, self.z)
         
-        if(self.verbose):
+        if self.verbose:
             Logger().log({"title": "Prompt", "details": p.value})
 
         response = ChatGPT(model=self.model_version).chat(p.value)
         
-        if(self.verbose):
+        if self.verbose:
             Logger().log({"title": "Response", "details": response})
 
         executor = Executor()
