@@ -23,6 +23,12 @@
 <a href="https://www.linkedin.com/in/aleksandra-p%C5%82o%C5%84ska-42047432/">👩‍💼 LinkedIn</a>
 </p>
 
+## Important secutiry risk
+
+The PlotAI executes code from LLM. It is using `exec()` function for this. 
+
+I commented out the `exec()` function in file `plotai/code/executor.py`. If you understand the security risks you need to remove comment to use the package.
+
 # PlotAI 🎨🤖 
 
 The easiest way to create plots in Python and Matplotlib. The `plotai` is using LLM to generate code and plots.
