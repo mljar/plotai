@@ -23,7 +23,7 @@
 <a href="https://www.linkedin.com/in/aleksandra-p%C5%82o%C5%84ska-42047432/">👩‍💼 LinkedIn</a>
 </p>
 
-## Important secutiry risk
+## Important securitiy risk
 
 The PlotAI executes code from LLM. It is using `exec()` function for this. 
 
